@@ -10,19 +10,18 @@ connect();
 
 const allowedOrigins = [
   'https://soen-main-subp.vercel.app',
-  'https://soen-main-subp-kalpesh-badgujars-projects.vercel.app'
+  'https://soen-main-subp-kalpesh-badgujars-projects.vercel.app',
+  'https://soen-main-subp-git-main-kalpesh-badgujars-projects.vercel.app',
+  'https://soen-main-subp-jdmjfoiel-kalpesh-badgujars-projects.vercel.app'
 ];
-
 const app = express();
 
 app.use(cors({
   origin: function (origin, callback) {
-    // Allow requests with no origin (like mobile apps or curl requests)
-    if (!origin) return callback(null, true);
-    if (allowedOrigins.includes(origin)) {
-      return callback(null, true);
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
     } else {
-      return callback(new Error('Not allowed by CORS'));
+      callback(new Error('Not allowed by CORS'));
     }
   },
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
