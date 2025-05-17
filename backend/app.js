@@ -10,15 +10,17 @@ connect();
 
 const app = express();
 
-app.use(cors({
+// CORS config
+const corsOptions = {
     origin: 'https://soen-main-subp.vercel.app',
-    credentials: true
-}));
+    credentials: true,
+};
 
-app.options('*', cors({
-    origin: 'https://soen-main-subp.vercel.app',
-    credentials: true
-}));
+// Apply CORS to all requests
+app.use(cors(corsOptions));
+
+// Manually handle preflight OPTIONS requests for all routes
+app.options('*', cors(corsOptions));
 
 app.use(morgan('dev'));
 app.use(express.json());
