@@ -8,14 +8,26 @@ import cookieParser from 'cookie-parser';
 import cors from 'cors';
 connect();
 
+const allowedOrigins = [
+  'https://soen-main-subp.vercel.app',
+  'https://soen-main-subp-kalpesh-badgujars-projects.vercel.app'
+];
 
 const app = express();
 
 app.use(cors({
-  origin: 'https://soen-main-subp.vercel.app',
+  origin: function (origin, callback) {
+    // Allow requests with no origin (like mobile apps or curl requests)
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.includes(origin)) {
+      return callback(null, true);
+    } else {
+      return callback(new Error('Not allowed by CORS'));
+    }
+  },
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
-  credentials: true, // only use this if you're using cookies/auth headers
+  credentials: true
 }));
 
 
