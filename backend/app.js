@@ -10,14 +10,12 @@ connect();
 
 const app = express();
 
-// CORS config
 const corsOptions = {
-    origin: 'https://soen-main-subp.vercel.app',
+    origin: '*',
     credentials: true,
 };
-
-// Apply CORS to all requests
 app.use(cors(corsOptions));
+app.options('*', cors(corsOptions));
 
 // Manually handle preflight OPTIONS requests for all routes
 app.options('*', cors(corsOptions));
