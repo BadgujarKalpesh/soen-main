@@ -14,6 +14,12 @@ app.use(cors({
     origin: 'https://soen-main-subp.vercel.app',
     credentials: true
 }));
+
+app.options('*', cors({
+    origin: 'https://soen-main-subp.vercel.app',
+    credentials: true
+}));
+
 app.use(morgan('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
