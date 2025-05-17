@@ -12,9 +12,12 @@ connect();
 const app = express();
 
 app.use(cors({
-  origin: '*',
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS']
+  origin: 'https://soen-main-subp.vercel.app',
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true, // only use this if you're using cookies/auth headers
 }));
+
 
 app.use(morgan('dev'));
 app.use(express.json());
