@@ -16,12 +16,20 @@ connect();
 // ];
 const app = express();
 
-const allowedOrigins = [
-  /\.vercel\.app$/ // Regex to match any vercel.app subdomain
-];
+// const allowedOrigins = [
+//   /\.vercel\.app$/ // Regex to match any vercel.app subdomain
+// ];
 
 app.use(cors({
-  origin: allowedOrigins,
+  origin: function(origin, callback) {
+    // Allow requests with no origin (like mobile apps, curl, etc.)
+    if (!origin) return callback(null, true);
+    // Allow *.vercel.app
+    if (/\.vercel\.app$/.test(origin)) {
+      return callback(null, true);
+    }
+    callback(new Error('Not allowed by CORS'));
+  },
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true
