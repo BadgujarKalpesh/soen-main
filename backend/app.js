@@ -11,7 +11,7 @@ connect();
 const app = express();
 
 const corsOptions = {
-    origin: '*',
+    origin: 'https://soen-main-subp.vercel.app',
     credentials: true,
 };
 app.use(cors(corsOptions));
