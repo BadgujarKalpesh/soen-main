@@ -68,20 +68,6 @@ A full-stack web application with user authentication and real-time collaboratio
 - MongoDB Atlas account or local MongoDB
 - Google Gemini API key
 
-### Installation
-```bash
-# Clone the repository
-git clone https://github.com/your-username/project-name.git
-cd project-name
-
-# Install server dependencies
-cd server
-npm install
-
-# Install client dependencies
-cd ../client
-npm install
-
 <img width="1916" height="905" alt="Screenshot 2025-07-17 221008" src="https://github.com/user-attachments/assets/9e863c56-e23f-44ca-9657-9f5513da98ed" />
 <img width="1919" height="1016" alt="Screenshot 2025-07-17 220945" src="https://github.com/user-attachments/assets/62ad61b5-10a1-460d-92c6-05ef128302b3" />
 <img width="1913" height="1015" alt="Screenshot 2025-07-17 220648" src="https://github.com/user-attachments/assets/8b8b8bcb-ed0f-4757-8a83-4192b61f1843" />
