@@ -7,6 +7,8 @@
 
 A full-stack web application with user authentication and real-time collaboration features, powered by AI coding assistance.
 
+## 🌟 Live Demo :- https://soen-main-subp.vercel.app/
+
 ## ✨ Key Features
 
 ### 🔐 User Authentication
@@ -28,9 +30,7 @@ A full-stack web application with user authentication and real-time collaboratio
 - Type `@ai` in chat to activate Gemini API
 - Get instant answers to coding questions
 - Examples:
-  - "Generate an Express server"
-  - "How to implement JWT auth in Node.js"
-  - "Create a React component with hooks"
+  - "@ai create a express server using 2 file app.js, package.json"
 
 ### 💻 In-Browser Code Execution
 - WebContainer integration
@@ -68,7 +68,16 @@ A full-stack web application with user authentication and real-time collaboratio
 - MongoDB Atlas account or local MongoDB
 - Google Gemini API key
 
+## 📸 Screenshots
+
+### Authentication
 <img width="1916" height="905" alt="Screenshot 2025-07-17 221008" src="https://github.com/user-attachments/assets/9e863c56-e23f-44ca-9657-9f5513da98ed" />
+
+### Project Dashboard
 <img width="1919" height="1016" alt="Screenshot 2025-07-17 220945" src="https://github.com/user-attachments/assets/62ad61b5-10a1-460d-92c6-05ef128302b3" />
+
+### Chat with another user
 <img width="1913" height="1015" alt="Screenshot 2025-07-17 220648" src="https://github.com/user-attachments/assets/8b8b8bcb-ed0f-4757-8a83-4192b61f1843" />
+
+### Code Execution
 <img width="1919" height="898" alt="Screenshot 2025-07-17 220928" src="https://github.com/user-attachments/assets/c15ceaa8-b1e9-4475-9afd-7f6b1c98f1fc" />
